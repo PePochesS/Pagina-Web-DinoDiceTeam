@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('Fotos Equipo/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #1b0701;
+    line-height: 1.6;
+  }
+  
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+
+  h1, h2 {
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #30200d;
+    margin-bottom: 2rem;
+  }
+  
+ 
+  .navbar {
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff !important;
+    cursor: default;
+    pointer-events: none; /* Opcional: así no se puede clicar */
+    text-decoration: none !important;
+  }
+  
+  .navbar-brand:hover,
+  .navbar-brand:focus {
+    color: #fff !important;
+    text-decoration: none !important;
+    background: none !important;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ddd;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #fff;
+  }
+  
+
+  footer {
+    background-color: #222;
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+
+  #equipo ul {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    list-style: none;
+  }
+  
+  .equipo-item {
+    background-color: rgba(187, 165, 140, 0.815);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  .equipo-item:hover {
+    transform: scale(1.05);
+  }
+  
+
+  .equipo-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #444;
+    margin-bottom: 0.5rem;
+  }
+  
+  #equipo div {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  .sticker {
+    position: fixed;
+    bottom: 80px; 
+    right: 20px;
+    width: 250px; 
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 999;
+  }
+  
+  .sticker.show {
+    opacity: 1;
+  }
+
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  a {
+    color: #922e00;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 600px) {
+    #equipo ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #equipo li {
+      width: 80%;
+    }
+  
+    #equipo img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+ 
+
+.logo-inicio {
+  max-width: 180px; /* Ajustá el tamaño a gusto */
+  height: auto;
+}
+
+.visual-slider {
+  width: 100%;
+  max-width: 700px;
+  height: 500px; /* Altura fija para que no cambie al rotar imágenes */
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+  object-fit: contain;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-sentado {
+  height: 50px;          /* Ajustá según tu imagen */
+  margin-right: 10px;    /* Espacio entre el logo y el texto */
+  vertical-align: middle;
+}
