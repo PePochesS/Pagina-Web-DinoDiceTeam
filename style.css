@@ -35,6 +35,11 @@ h1, h2 {
   color: #222;
 }
 
+h2 {
+  text-align: center;
+  width: 100%;
+}
+
 .lead {
   font-size: 1.25rem;
   font-weight: 500;
@@ -282,9 +287,14 @@ a:hover {
     height: 90px;
   }
   .equipo-item {
-    width: 98%;
+    width: 95vw;
     max-width: 320px;
+    min-width: 180px;
     margin-bottom: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   footer {
     position: static;
@@ -305,3 +315,16 @@ a:hover {
     display: block;
   }
 }
+
+@media (min-width: 1000px) {
+
+  #equipo { 
+    max-width: 980px;  
+  }
+
+  #equipo ul {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+
